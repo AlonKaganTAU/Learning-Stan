@@ -1,0 +1,6 @@
+numpy
+cmdstanpy
+plotnine
+pandas
+patchworklib
+setuptools
