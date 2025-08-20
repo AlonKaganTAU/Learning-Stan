@@ -1,20 +1,72 @@
-# Learning Stan
-Here Alon Kagan learns to use stan and Baysean statistics in General
+# 📊 Learning Stan
 
-I will follow this guide:
+Welcome! This repo documents Alon Kagan's journey learning **Stan** and **Bayesian statistics** in general.
 
-https://bob-carpenter.github.io/stan-getting-started/stan-getting-started.html
+## 📘 Learning Resources
 
-And also try to recreate the results of an unpublished paper (held private for now)
+I'm following this guide:
 
-## Steps for instalation
+- [Stan Getting Started Guide by Bob Carpenter](https://bob-carpenter.github.io/stan-getting-started/stan-getting-started.html)
 
-Make sure you have python 3.12 or lower. And python is in your PATH.
+Additionally, I will try to recreate results from an **unpublished paper** (kept private for now).
 
-Install Rtools, then open Rtools bash and type in `pacman -Sy mingw-w64-x86_64-make`
+Lastly, there is probably a youtube course worth watching, [here](https://www.youtube.com/playlist?list=PLCrWEzJgSUqwL85xIj1wubGdY15C5Gf7H) (if I have spare time)
 
-Put "C:\rtools45\mingw64\bin" to your PATH.
+---
 
-pip install -r requirements. You can also do in in VENV.
+## ⚙️ Installation Instructions
 
-python -m "import cmdstanpy; cmdstanpy.install_cmdstan()"
+### 1. Install WSL (Windows Subsystem for Linux)
+
+If you're using WSL for the first time, update and install required packages:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y python3 python3-pip build-essential git wget unzip
+sudo apt install -y python3-venv
+```
+
+### 2. Set Up Python Virtual Environment for CmdStanPy
+
+```bash
+python3 -m venv ~/cmdstanpy-env
+source ~/cmdstanpy-env/bin/activate
+```
+### 3. Upgrade Pip
+```bash
+pip install --upgrade pip
+```
+### 4. Install Required Python Packages
+Make sure you have a requirements.txt file in your directory, then run:
+
+```bash
+pip install -r requirements.txt
+```
+
+5. Install CmdStan via CmdStanPy
+```bash
+python -c "import cmdstanpy; cmdstanpy.install_cmdstan()"
+```
+
+---
+
+✅ You're All Set!
+From now on, whenever you want to use CmdStanPy, just:
+
+```bash
+source ~/cmdstanpy-env/bin/activate
+```
+
+And you're good to go!
+
+## Usage
+
+open a new session:
+
+```bash
+wsl
+source ~/cmdstanpy-env/bin/activate
+```
+
+## 🧠 Author
+Alon Kagan — Exploring Bayesian inference and Stan one model at a time. (This joke was made by ChatGPT when I told it to make this page look nicer)
